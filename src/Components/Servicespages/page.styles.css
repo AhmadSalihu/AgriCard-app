@@ -1,0 +1,98 @@
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+ font-family: 'Open Sans Condensed', sans-serif;
+}
+.btn {
+  background-color: #062f5f; /* Green */
+  border-radius: 12px;
+  color: white;
+  padding: 2px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-shrink: inherit;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+  margin-bottom: 25px;
+}
+
+.tb{
+  margin-top: 10px;
+}
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+  margin: 0 -5px;
+  margin-top: 25px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+.title{
+  font-size: 8px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.image-container {
+  background-image: url("/cardimages/el-rufai01.jpg");
+  background-size: cover;
+  position: relative;
+  height: 500px;
+  width: 100%;
+}
+
+.text {
+  background-color: rgb(46, 44, 44);
+  color: #e9af11;
+  font-size: 10vw; 
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+.card:hover,
+.card:focus {
+  transform: scale(1.05);
+}
